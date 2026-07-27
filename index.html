@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HodoHodo プライバシーポリシー</title>
+<style>
+  :root {
+    --bg: #f7f8fc;
+    --surface: #ffffff;
+    --ink: #1a1d29;
+    --ink-muted: #5b6072;
+    --ink-faint: #8790a8;
+    --accent: #3d7bff;
+    --accent-soft: #eaf0ff;
+    --border: #e3e6ef;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12141c;
+      --surface: #1b1e29;
+      --ink: #edeff5;
+      --ink-muted: #9aa0b4;
+      --ink-faint: #6b7086;
+      --accent: #7ea2ff;
+      --accent-soft: #202a44;
+      --border: #2a2e3d;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+      "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Segoe UI", Roboto,
+      "Noto Sans JP", sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 120px;
+  }
+
+  header.hero {
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(28px, 4vw, 36px);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+
+  .lede {
+    font-size: 16px;
+    color: var(--ink-muted);
+    max-width: 60ch;
+    margin: 0 0 20px;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    font-size: 13px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+
+  .meta-row span strong {
+    color: var(--ink-muted);
+    font-weight: 600;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 32px 0 8px;
+  }
+
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 16px 15px;
+  }
+
+  .summary-card .icon {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .summary-card .label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .summary-card .detail {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    line-height: 1.5;
+  }
+
+  main {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 8px clamp(24px, 5vw, 56px);
+  }
+
+  section {
+    padding: 34px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-child {
+    border-bottom: none;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .section-num {
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+
+  section p {
+    margin: 0 0 12px;
+    color: var(--ink-muted);
+    font-size: 15px;
+    max-width: 64ch;
+  }
+
+  section p:last-child { margin-bottom: 0; }
+
+  section ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+    color: var(--ink-muted);
+    font-size: 15px;
+  }
+
+  section li {
+    margin-bottom: 6px;
+  }
+
+  section li::marker {
+    color: var(--accent);
+  }
+
+  .no-collect {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  code {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-size: 0.92em;
+    font-family: "SF Mono", ui-monospace, Consolas, monospace;
+  }
+
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 520px) {
+    .page { padding: 40px 16px 80px; }
+    main { padding: 4px 20px; border-radius: 16px; }
+    section { padding: 26px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="hero">
+    <div class="eyebrow">Privacy Policy</div>
+    <h1>HodoHodo プライバシーポリシー</h1>
+    <p class="lede">
+      HodoHodoは、アカウント登録や外部へのデータ送信を必要としない、端末内完結型のセルフマネジメントアプリです。
+      本ポリシーでは、アプリが扱う情報とその取り扱い方針について説明します。
+    </p>
+    <div class="meta-row">
+      <span><strong>制定日</strong> 2026年7月27日</span>
+      <span><strong>最終更新日</strong> 2026年7月27日</span>
+      <span><strong>対象</strong> HodoHodo(Android版) Version 1.0</span>
+    </div>
+  </header>
+
+  <div class="summary-grid">
+    <div class="summary-card">
+      <span class="icon">🔒</span>
+      <div class="label">ログイン不要</div>
+      <div class="detail">アカウント作成や個人情報の入力を求めません</div>
+    </div>
+    <div class="summary-card">
+      <span class="icon">📱</span>
+      <div class="label">端末内保存のみ</div>
+      <div class="detail">記録データは端末のローカルストレージにのみ保存されます</div>
+    </div>
+    <div class="summary-card">
+      <span class="icon">🚫</span>
+      <div class="label">広告・解析なし</div>
+      <div class="detail">広告SDK・行動分析SDKを組み込んでいません</div>
+    </div>
+    <div class="summary-card">
+      <span class="icon">📡</span>
+      <div class="label">通信は任意のみ</div>
+      <div class="detail">バックアップ書き出し等、ユーザー操作時のみ端末機能を利用します</div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>収集する情報</h2>
+      </div>
+      <div class="no-collect">✓ 個人情報の収集・送信は行いません</div>
+      <p>
+        HodoHodoは、氏名・メールアドレス・電話番号などの個人情報の入力や、外部サーバーへの送信を必要としません。
+        アプリの利用にあたり、ユーザーが作成する以下の情報は、すべて端末内のローカルデータベースにのみ保存されます。
+      </p>
+      <ul>
+        <li>登録した項目の名前・上限回数・期間設定・タグ・効果設定</li>
+        <li>記録した実行イベントの日時</li>
+        <li>期間確定後の履歴(使用回数・達成状況・換算効果)</li>
+        <li>外観設定などのアプリ内設定</li>
+      </ul>
+      <p>
+        端末内での識別のみに使う <code>installationId</code>(端末内で生成される識別子)を保持していますが、これは外部へ送信されません。
+      </p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>データの保存場所</h2>
+      </div>
+      <p>
+        すべてのデータは、お使いの端末内のアプリ専用領域(SQLiteデータベース)に保存されます。HodoHodoは自社または第三者のサーバーにデータを送信・保管しません。
+        アプリをアンインストールすると、端末内のデータも削除されます。
+      </p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>バックアップ機能について</h2>
+      </div>
+      <p>
+        設定画面の「バックアップ」機能を使うと、記録データをファイル(<code>.hodohodo</code>形式)として書き出すことができます。
+        この操作は常にユーザー自身の明示的な操作によってのみ行われ、書き出し先はOS標準の共有シートを通じてユーザーが選択します。
+        HodoHodoが自動的にどこかへアップロードすることはありません。書き出したファイルの管理は、選択した保存先(お使いのクラウドストレージ等)のポリシーに従います。
+      </p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>第三者への提供</h2>
+      </div>
+      <p>
+        HodoHodoは広告SDK・アクセス解析SDK・クラッシュレポートSDKなどの第三者ライブラリを組み込んでいません。
+        そのため、利用状況や記録内容が広告配信事業者や分析事業者に共有されることはありません。
+      </p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>権限の利用</h2>
+      </div>
+      <p>アプリが要求する端末の機能・権限は、以下の目的に限定して利用します。</p>
+      <ul>
+        <li>ファイル選択・共有 — バックアップの書き出し/読み込み操作時のみ</li>
+        <li>端末のタイムゾーン情報 — 期間(日/週/月)の境界を正しく計算するため</li>
+      </ul>
+      <p>位置情報・連絡先・カメラ・マイクなどへのアクセスは行いません。</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2>健康・金銭情報の取り扱い</h2>
+      </div>
+      <p>
+        HodoHodo内で表示されるkcalや円などの換算値は、ユーザー自身が入力した設定値をもとにした参考値であり、医療行為・依存症治療・家計管理の専門的助言に代わるものではありません。
+        これらの値が外部へ送信されることもありません。
+      </p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">07</span>
+        <h2>お子様のプライバシー</h2>
+      </div>
+      <p>
+        HodoHodoは特定の年齢層を対象とした個人情報の収集を行っていません。アプリの性質上、年齢を問わずご利用いただけますが、収集する個人情報がないため、お子様のプライバシーに関する追加のリスクは生じません。
+      </p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">08</span>
+        <h2>本ポリシーの変更</h2>
+      </div>
+      <p>
+        アプリの機能追加(例: クラウド同期やバックアップ暗号化)に伴いデータの取り扱いが変わる場合は、本ポリシーを改訂し、アプリ内の「設定 &gt; 情報 &gt; プライバシー」および本ページで最新の内容をご確認いただけるようにします。
+      </p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">09</span>
+        <h2>お問い合わせ</h2>
+      </div>
+      <p>
+        本ポリシーに関するご質問は、Google Playのアプリ掲載ページに記載の開発者連絡先までお願いいたします。
+      </p>
+    </section>
+  </main>
+
+  <footer>HodoHodo — 「ほどほどにしたい」を、1タップで続けられる形に。</footer>
+</div>
+
+</body>
+</html>
