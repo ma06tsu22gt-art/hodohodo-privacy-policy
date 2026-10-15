@@ -245,7 +245,7 @@
     </p>
     <div class="meta-row">
       <span><strong>制定日</strong> 2026年7月27日</span>
-      <span><strong>最終更新日</strong> 2026年7月27日</span>
+      <span><strong>最終更新日</strong> 2026年10月15日</span>
       <span><strong>対象</strong> HodoHodo(Android版) Version 1.0</span>
     </div>
   </header>
@@ -262,9 +262,9 @@
       <div class="detail">記録データは端末のローカルストレージにのみ保存されます</div>
     </div>
     <div class="summary-card">
-      <span class="icon">🚫</span>
-      <div class="label">広告・解析なし</div>
-      <div class="detail">広告SDK・行動分析SDKを組み込んでいません</div>
+      <span class="icon">📢</span>
+      <div class="label">無料版のみ広告あり</div>
+      <div class="detail">無料版にGoogle AdMobのバナー広告を表示します。記録データは広告に使われません</div>
     </div>
     <div class="summary-card">
       <span class="icon">📡</span>
@@ -279,7 +279,7 @@
         <span class="section-num">01</span>
         <h2>収集する情報</h2>
       </div>
-      <div class="no-collect">✓ 個人情報の収集・送信は行いません</div>
+      <div class="no-collect">✓ 記録データの収集・送信は行いません</div>
       <p>
         HodoHodoは、氏名・メールアドレス・電話番号などの個人情報の入力や、外部サーバーへの送信を必要としません。
         アプリの利用にあたり、ユーザーが作成する以下の情報は、すべて端末内のローカルデータベースにのみ保存されます。
@@ -292,6 +292,9 @@
       </ul>
       <p>
         端末内での識別のみに使う <code>installationId</code>(端末内で生成される識別子)を保持していますが、これは外部へ送信されません。
+      </p>
+      <p>
+        なお、無料版では広告の表示のために、Google Mobile Ads SDK(Google AdMob)が広告IDなどの端末情報を扱います。詳しくは「第三者への提供」をご覧ください。
       </p>
     </section>
 
@@ -324,8 +327,19 @@
         <h2>第三者への提供</h2>
       </div>
       <p>
-        HodoHodoは広告SDK・アクセス解析SDK・クラッシュレポートSDKなどの第三者ライブラリを組み込んでいません。
-        そのため、利用状況や記録内容が広告配信事業者や分析事業者に共有されることはありません。
+        HodoHodoは、無料版でバナー広告を表示するために、Google LLC が提供する Google Mobile Ads SDK(Google AdMob)を組み込んでいます。
+        広告の配信・効果測定・不正防止のため、同SDKは広告ID、IPアドレス、端末やOSの情報、広告の表示・タップなどの情報を収集し、Googleに送信することがあります。
+        これらの情報の取り扱いは <a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Google のパートナーのサイトやアプリでのデータ利用</a> および
+        <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google プライバシー ポリシー</a> に従います。
+      </p>
+      <p>
+        登録した項目名・記録の履歴などの記録データは、広告SDKにも外部にも送信されません。
+        項目数無制限プラン(月額・買い切り)をご利用の方には広告を表示しません。
+        欧州経済領域(EEA)・英国などでは、広告の個人に合わせた配信について同意を確認する画面を表示する場合があります。
+        広告IDは端末の設定(設定 &gt; プライバシー &gt; 広告 など)からリセット・削除できます。
+      </p>
+      <p>
+        アクセス解析SDK・クラッシュレポートSDKは組み込んでいません。
       </p>
     </section>
 
